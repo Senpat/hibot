@@ -35,5 +35,5 @@ def main():
     while True:
         run_hibot(reddit)
       
-if __name == '__main__':
+if __name__ == '__main__':
     main()
