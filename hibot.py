@@ -19,8 +19,7 @@ def run_hibot(reddit):
     print('getting 250 comments...\n')
     
     for comment in reddit.subreddit('test').comments(limit = 250):
-        match = re.findall("hi /u/TheSenpat",comment.body)
-        if match:
+        if "hi TheSenpat" in comment.body:
             print('Link found with comment ID: " + comment.id')
             
             #check to see if comment id is in the file
