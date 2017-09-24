@@ -11,7 +11,10 @@ import bs4
 
 def authenticate():
   print("Authenticating...\n")
-  reddit = praw.Reddit('hibot',user_agent = 'web:hi-bot:v0.1 (by /u/The_Senpat)')
+  #reddit = praw.Reddit('hibot',user_agent = 'web:hi-bot:v0.1 (by /u/The_Senpat)')
+  reddit = praw.Reddit(client_id='P6KBJamDVskaOQ',
+                     client_secret="KhlUmoWTy21NVtHtbPEmAT1mBv4", password='bot1password',
+                     user_agent='hibot by /u/TheSenpat', username='spbot1')
   print('Authenticated as {}\n'.format(reddit.user.me()))
   return reddit
 
@@ -30,9 +33,12 @@ def run_hibot(reddit):
             
             
 def main():
+    print("main2")
     reddit = authenticate()
+    print("main3")
     while True:
         run_hibot(reddit)
       
 if __name__ == '__main__':
+    print("main1")
     main()
