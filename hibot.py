@@ -32,7 +32,7 @@ def run_hibot(reddit):
     
             if comment.id not in file_obj_r.read().splitlines():
                 print('Link is unique...posting explanation\n')
-                comment.reply(header + explanation + footer)                 
+                comment.reply('hi')                 
                 file_obj_r.close()
 
                 file_obj_w = open(path,'a+')
@@ -41,7 +41,7 @@ def run_hibot(reddit):
             else:
                 print('Already visited link...no reply needed\n')
             
-            comment.reply('hi')
+            #comment.reply('hi')
             
             time.sleep(60)
             
