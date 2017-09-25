@@ -9,7 +9,7 @@ import re
 import requests
 import bs4
 
-path = "/Users/zz198/Desktop/PatrickP/Bot/commented.txt"
+path = "commented.txt"
 
 def authenticate():
   print("Authenticating...\n")
